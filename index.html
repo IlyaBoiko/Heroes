@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">Heroes</a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#" style="--i:1;">Home</a></li>
+                <li><a href="#" style="--i:2;">Characters</a></li>
+                <li><a href="#" style="--i:3;">Movies</a></li>
+                <li><a href="#" style="--i:4;">Games</a></li>
+                <li><a href="#" style="--i:5;">More</a></li>
+            </ul>
+        </header>
+        <div class="container">
+            <div class="box" style="--i:3;">
+                <div class="box__imgs">
+                    <img src="./img/hero1.jpg" alt="#">
+                </div>
+            </div>
+            <div class="box" style="--i:4;">
+                <div class="box__imgs">
+                    <img src="./img/hero2.jpg" alt="#">
+                </div>
+            </div>
+            <div class="box" style="--i:5;">
+                <div class="box__imgs">
+                    <img src="./img/hero3.jpg" alt="#">
+                </div>
+            </div>
+            <div class="box" style="--i:6;">
+                <div class="box__imgs">
+                    <img src="./img/hero4.jpg" alt="#">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <ul class="sci">
+                <li><a href="#" style="--i:9;">Facebook</a></li>
+                <li><a href="#" style="--i:8;">LinkedIn</a></li>
+                <li><a href="#" style="--i:7;">Instagram</a></li>
+            </ul>
+            <p class="copyright_text">© Boiko Illia. 2021</p>
+        </div>
+    </section>
+
+
+
+    <script>
+        let boxImg = document.querySelectorAll('.box__imgs')
+        boxImg.forEach(popup => popup.addEventListener('click', () => {
+            popup.classList.toggle('active');
+        }))
+
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
